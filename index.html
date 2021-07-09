@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+       <h2 class="clock"></h2>
+    </div>
+    <script>
+            
+            const clocks = () => { 
+            var fulltime = new Date();
+            var hours = fulltime.getHours();
+            // console.log(hours);
+            var minutes = fulltime.getMinutes();
+            // console.log(minutes);
+            var seconds = fulltime.getSeconds();
+            // console.log(seconds);
+            var clock = document.querySelector('.clock')
+            var total = `${hours}:${minutes}:${seconds}`
+            clock.innerHTML = total;            
+        }
+           
+        setInterval(() => {
+        clocks()
+
+        },1000)
+       
+    </script>
+</body>
+</html>
